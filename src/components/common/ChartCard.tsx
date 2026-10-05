@@ -22,13 +22,12 @@ export const ChartCard: React.FC<ChartCardProps> = ({
   className = ''
 }) => {
   const rightAction = headerAction || action;
+
   return (
-    <div className={`bg-white rounded-lg border border-slate-200 shadow-subtle p-4 sm:p-5 flex min-w-0 flex-col overflow-hidden ${className}`}>
+    <div className={`bg-white rounded-lg border border-slate-200 shadow-subtle p-4 sm:p-5 flex min-w-0 flex-col overflow-visible ${className}`}>
       <div className="flex min-w-0 flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
         <div className="min-w-0">
-          <div className="flex min-w-0 items-center gap-2">
-            <h3 className="min-w-0 text-sm sm:text-base font-bold text-navy-900 leading-snug truncate">{title}</h3>
-          </div>
+          <h3 className="min-w-0 text-sm sm:text-base font-bold text-navy-900 leading-snug">{title}</h3>
           {subtitle && <p className="text-xs text-txt-secondary mt-0.5 leading-relaxed">{subtitle}</p>}
         </div>
         {rightAction && (
@@ -38,8 +37,13 @@ export const ChartCard: React.FC<ChartCardProps> = ({
         )}
       </div>
 
-      {/* A definite responsive height prevents Recharts percentage-height containers from collapsing. */}
-      <div className="block min-w-0 w-full min-h-[240px] h-[clamp(260px,30vw,340px)] overflow-hidden">
+      {/*
+        Do not impose a fixed height here. Individual chart wrappers already define
+        their own height, and a few charts use ResponsiveContainer directly.
+        A real minimum height gives direct ResponsiveContainer children a measurable
+        parent without fighting nested h-* chart wrappers.
+      */}
+      <div className="relative w-full min-w-0 min-h-[260px]">
         {children}
       </div>
 
