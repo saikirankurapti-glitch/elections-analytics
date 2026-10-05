@@ -28,11 +28,7 @@ export const ChartCard: React.FC<ChartCardProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-base font-bold text-navy-900 leading-snug">{title}</h3>
-            {badge && (
-              <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-                {badge}
-              </span>
-            )}
+            
           </div>
           {subtitle && <p className="text-xs text-txt-secondary mt-0.5">{subtitle}</p>}
         </div>
