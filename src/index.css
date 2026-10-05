@@ -16,6 +16,7 @@
 
   body {
     background-color: #F5F7FA;
+    overflow-x: hidden;
     color: #172033;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
@@ -38,6 +39,8 @@
 }
 
 @layer utilities {
+  .min-w-0 { min-width: 0; }
+
   .tabular-nums {
     font-variant-numeric: tabular-nums;
   }
@@ -107,5 +110,9 @@
 }
 
 
-/* KPI safety: keep 3D/depth numbers and sparklines clipped inside cards */
+/* Responsive dashboard safety: charts/tables/cards must never expand the page horizontally. */
 .kpi-card-safe { min-width: 0; overflow: hidden; }
+.dashboard-content, .dashboard-content * { min-width: 0; }
+.recharts-responsive-container { min-width: 0 !important; }
+.recharts-wrapper { max-width: 100% !important; }
+
