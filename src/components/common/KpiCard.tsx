@@ -166,7 +166,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
       <svg
         width={width}
         height={height}
-        className="w-12 shrink-0 overflow-hidden opacity-90 transition-opacity group-hover:opacity-100"
+        className="w-10 sm:w-12 shrink-0 overflow-hidden opacity-90 transition-opacity group-hover:opacity-100"
         aria-hidden="true"
       >
         <path d={areaD} fill={currentTheme.sparkFill} opacity="0.6" />
@@ -193,7 +193,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
     >
       {/* Top Header: Title & Icon */}
       <div className="flex items-start justify-between gap-1.5">
-        <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 truncate">
+        <p className="min-h-[28px] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 leading-tight line-clamp-2">
           {title}
         </p>
         {Icon && (
@@ -206,7 +206,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
       {/* Main Number with 3D Layered Depth Styling */}
       <div className="mt-2 flex min-w-0 items-center justify-between gap-2 overflow-hidden">
         <div
-          className={`min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[clamp(1.15rem,2.1vw,1.625rem)] font-black tracking-tight tabular-nums select-none ${currentTheme.textNum}`}
+          className={`min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[clamp(1.05rem,1.8vw,1.5rem)] font-black tracking-tight tabular-nums select-none ${currentTheme.textNum}`}
           style={{
             textShadow: currentTheme.textShadow,
             letterSpacing: '-0.02em'
