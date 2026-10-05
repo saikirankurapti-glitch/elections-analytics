@@ -17,7 +17,6 @@ import {
   FileText
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   XAxis,
@@ -30,6 +29,7 @@ import { mockCampaigns } from '../data/mockData';
 import { useFilters } from '../context/FilterContext';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { StatusBadge } from '../components/common/StatusBadge';
 import {
   formatIndianNumber,
@@ -166,7 +166,7 @@ export const CampaignDetail: React.FC = () => {
             title="Multi-Channel Delivery Volume"
             subtitle="Comparative outreach across calls, WhatsApp, SMS, and digital impression streams"
           >
-            <ResponsiveContainer width="100%" height={260}>
+            <ResponsiveChart width="100%" height={260}>
               <BarChart data={channelBreakdownData} margin={{ top: 15, right: 10, left: 0, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
                 <XAxis dataKey="channel" tick={{ fontSize: 11, fill: '#64748B' }} />
@@ -177,7 +177,7 @@ export const CampaignDetail: React.FC = () => {
                 />
                 <Bar dataKey="count" fill="#0B1F3A" radius={[4, 4, 0, 0]} />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           </ChartCard>
         </div>
 
