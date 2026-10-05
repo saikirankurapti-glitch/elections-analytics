@@ -162,7 +162,7 @@ export const CampaignsPage: React.FC = () => {
       </div>
 
       {/* Top 9 Campaign KPIs (Phase 11 Specs) */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-9 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2.5">
         <KpiCard
           title="Total Campaigns"
           value={kpis.total}
