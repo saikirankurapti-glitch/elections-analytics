@@ -20,7 +20,6 @@ import {
   UserCheck
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   LineChart,
@@ -38,6 +37,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { StatusBadge } from '../components/common/StatusBadge';
 import {
   mockCallingAgentKpis,
@@ -233,7 +233,7 @@ export const CallingAgentPage: React.FC = () => {
         {/* Dynamic Chart in Performance Card */}
         <div className="h-64 w-full pt-4">
           {activeVizTab === 'hourly' && (
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveChart width="100%" height="100%">
               <AreaChart data={mockCallsByHour} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                 <defs>
                   <linearGradient id="callHourlyGrad" x1="0" y1="0" x2="0" y2="1">
@@ -270,11 +270,11 @@ export const CallingAgentPage: React.FC = () => {
                 <Area type="monotone" dataKey="calls" name="Initiated Calls" stroke="#FF9933" strokeWidth={2} fill="url(#callHourlyGrad)" />
                 <Area type="monotone" dataKey="connected" name="Connected Calls" stroke="#138808" strokeWidth={2} fill="url(#connHourlyGrad)" />
               </AreaChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           )}
 
           {activeVizTab === 'daily' && (
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveChart width="100%" height="100%">
               <BarChart data={callsByDayData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
                 <XAxis dataKey="day" tick={{ fontSize: 11, fill: '#94A3B8' }} tickLine={false} />
@@ -287,11 +287,11 @@ export const CallingAgentPage: React.FC = () => {
                 <Bar dataKey="initiated" name="Initiated Calls" fill="#3B82F6" radius={[3, 3, 0, 0]} />
                 <Bar dataKey="connected" name="Connected Calls" fill="#10B981" radius={[3, 3, 0, 0]} />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           )}
 
           {activeVizTab === 'duration' && (
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveChart width="100%" height="100%">
               <BarChart data={durationBucketsData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
                 <XAxis dataKey="range" tick={{ fontSize: 11, fill: '#94A3B8' }} tickLine={false} />
@@ -305,7 +305,7 @@ export const CallingAgentPage: React.FC = () => {
                 />
                 <Bar dataKey="count" name="Dialogue Sessions" fill="#FF9933" radius={[4, 4, 0, 0]} />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           )}
         </div>
       </div>
@@ -327,7 +327,7 @@ export const CallingAgentPage: React.FC = () => {
 
             <div className="relative h-[250px] sm:h-[270px] mt-2 min-w-0 rounded-lg bg-gradient-to-br from-slate-50 via-white to-slate-100/70 border border-slate-100 overflow-hidden">
               <div className="absolute inset-x-6 top-4 h-10 rounded-full bg-slate-200/40 blur-xl pointer-events-none" />
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveChart width="100%" height="100%">
                 <PieChart margin={{ top: 8, right: 8, bottom: 8, left: 8 }}>
                   {/* Lower ring creates a subtle 3D/depth layer instead of a flat donut. */}
                   <Pie
@@ -367,7 +367,7 @@ export const CallingAgentPage: React.FC = () => {
                     contentStyle={{ backgroundColor: '#0B1F3A', borderColor: '#1D4175', color: '#fff', fontSize: '12px' }}
                   />
                 </PieChart>
-              </ResponsiveContainer>
+              </ResponsiveChart>
               <div className="pointer-events-none absolute left-1/2 top-[49%] -translate-x-1/2 -translate-y-1/2 text-center">
                 <div className="text-2xl sm:text-3xl font-black text-navy-900 tabular-nums">13.1M</div>
                 <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-500">voice outcomes</div>
