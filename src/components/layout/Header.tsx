@@ -121,7 +121,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Center / Global Search with Autocomplete */}
-        <div ref={searchContainerRef} className="hidden md:flex flex-1 max-w-md mx-2 relative">
+        <div ref={searchContainerRef} className="hidden md:flex flex-1 min-w-0 max-w-lg mx-2 relative">
           <div className="relative w-full">
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
@@ -180,9 +180,9 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Right Section: Selectors, Notifications & Profile */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* State Selector: Uttar Pradesh Configured for 403 ACs */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden 2xl:flex items-center">
             <select
               aria-label="State Selector"
               value={filters.stateId}
@@ -196,7 +196,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Election Selector */}
-          <div className="hidden xl:flex items-center">
+          <div className="hidden 2xl:flex items-center">
             <select
               aria-label="Election Selector"
               value={filters.electionId}
