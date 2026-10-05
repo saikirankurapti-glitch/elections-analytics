@@ -142,7 +142,7 @@ export const CampaignsPage: React.FC = () => {
               Uttar Pradesh State Operations
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -235,7 +235,7 @@ export const CampaignsPage: React.FC = () => {
           <ChartCard
             title="Campaign Activity & Outreach Velocity"
             subtitle="Cumulative citizen reach, voice calls, and inbound feedback trends"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
             headerAction={
               <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded text-[11px] font-semibold">
                 <button
@@ -338,7 +338,7 @@ export const CampaignsPage: React.FC = () => {
           <ChartCard
             title="Campaign Objective Taxonomy"
             subtitle="Allocation across strategic communication mandates"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
           >
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
@@ -441,7 +441,7 @@ export const CampaignsPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Detailed multi-channel delivery metrics and schedule status per campaign</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
