@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
   { id: 'campaigns', label: 'Campaign Command', icon: Target, badge: '48', section: 'operations' },
 
   // Channels
-  { id: 'calling-agent', label: 'Calling Agent', icon: PhoneCall, badge: 'Demo', section: 'channels' },
+  { id: 'calling-agent', label: 'Calling Agent', icon: PhoneCall, badge: 'Sample', section: 'channels' },
   { id: 'whatsapp', label: 'WhatsApp & Groups', icon: MessageSquare, section: 'channels' },
   { id: 'sms', label: 'SMS Outreach', icon: Mail, section: 'channels' },
   { id: 'social', label: 'Social Engagement', icon: Share2, section: 'channels' },
