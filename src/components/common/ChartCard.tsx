@@ -39,7 +39,7 @@ export const ChartCard: React.FC<ChartCardProps> = ({
       </div>
 
       {/* A definite responsive height prevents Recharts percentage-height containers from collapsing. */}
-      <div className="flex min-w-0 w-full min-h-[240px] h-[clamp(240px,30vw,340px)] overflow-hidden">
+      <div className="block min-w-0 w-full min-h-[240px] h-[clamp(260px,30vw,340px)] overflow-hidden">
         {children}
       </div>
 
