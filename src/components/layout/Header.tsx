@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
   const notifications = [
     { id: 1, title: 'ECI Data Ingestion', desc: '403 Assembly Constituencies verified against 2022 report.', time: '12m ago', unread: true },
     { id: 2, title: 'Geospatial Boundaries', desc: 'Post-2008 delimitation polygons loaded (100% pass).', time: '35m ago', unread: true },
-    { id: 3, title: 'Campaign Telemetry Stream', desc: 'Synthetic demonstration data active in Demo Mode.', time: '1h ago', unread: false }
+    { id: 3, title: 'Campaign Telemetry Stream', desc: 'Sample telemetry stream active.', time: '1h ago', unread: false }
   ];
 
   // Search results for UP Constituencies
@@ -215,7 +215,7 @@ export const Header: React.FC = () => {
             </select>
           </div>
 
-          {/* Demo Mode Badge */}
+          {/* Sample Mode Badge */}
           <div className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
             Demo Mode
