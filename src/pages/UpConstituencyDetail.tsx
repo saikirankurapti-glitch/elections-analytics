@@ -95,7 +95,7 @@ export const UpConstituencyDetail: React.FC<UpConstituencyDetailProps> = ({
           </div>
           <div className="flex items-center gap-1.5">
             <span className="font-semibold text-navy-900">Campaign Operations:</span>
-            <span className="text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded">DEMO MODE (Synthetic)</span>
+            <span className="text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded">Sample Telemetry</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="font-semibold text-navy-900">Last Telemetry Synced:</span>
@@ -110,7 +110,7 @@ export const UpConstituencyDetail: React.FC<UpConstituencyDetailProps> = ({
           <h3 className="text-xs font-bold uppercase tracking-wider text-navy-900 flex items-center gap-1.5">
             <span>Operational Campaign Metrics</span>
             <span className="text-[10px] text-amber-700 font-semibold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-              Demo Synthetic Telemetry
+              Sample Telemetry
             </span>
           </h3>
           <span className="text-xs text-slate-500">
@@ -281,7 +281,7 @@ export const UpConstituencyDetail: React.FC<UpConstituencyDetailProps> = ({
               </div>
               <div className="flex justify-between">
                 <span>Data Environment:</span>
-                <span className="text-amber-700 font-bold">Synthetic Campaign Demonstration Data</span>
+                <span className="text-amber-700 font-bold">Sample Campaign Telemetry</span>
               </div>
             </div>
           </div>
