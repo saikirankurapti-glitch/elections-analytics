@@ -166,7 +166,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
       <svg
         width={width}
         height={height}
-        className="shrink-0 overflow-visible opacity-90 transition-opacity group-hover:opacity-100"
+        className="w-12 shrink-0 overflow-hidden opacity-90 transition-opacity group-hover:opacity-100"
         aria-hidden="true"
       >
         <path d={areaD} fill={currentTheme.sparkFill} opacity="0.6" />
@@ -185,7 +185,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`group relative bg-white rounded-lg border border-slate-200/90 p-3.5 transition-all duration-200 shadow-xs hover:shadow-md ${
+      className={`group relative min-w-0 overflow-hidden bg-white rounded-lg border border-slate-200/90 p-3.5 transition-all duration-200 shadow-xs hover:shadow-md ${
         currentTheme.borderEdge
       } ${
         onClick ? 'cursor-pointer hover:-translate-y-0.5' : ''
@@ -204,9 +204,9 @@ export const KpiCard: React.FC<KpiCardProps> = ({
       </div>
 
       {/* Main Number with 3D Layered Depth Styling */}
-      <div className="mt-2 flex items-baseline justify-between gap-2">
+      <div className="mt-2 flex min-w-0 items-center justify-between gap-2 overflow-hidden">
         <div
-          className={`text-2xl sm:text-[26px] font-black tracking-tight tabular-nums select-none ${currentTheme.textNum}`}
+          className={`min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[clamp(1.15rem,2.1vw,1.625rem)] font-black tracking-tight tabular-nums select-none ${currentTheme.textNum}`}
           style={{
             textShadow: currentTheme.textShadow,
             letterSpacing: '-0.02em'
