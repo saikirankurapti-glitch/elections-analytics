@@ -197,7 +197,7 @@ export const DistrictDashboardPage: React.FC = () => {
       </div>
 
       {/* Top 8 District KPIs with 3D Depth Numbers & Sparklines */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-3">
         <KpiCard
           title="Districts"
           value="75"
