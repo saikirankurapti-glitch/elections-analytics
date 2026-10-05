@@ -31,7 +31,6 @@ import {
   PhoneIncoming
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   AreaChart,
   Area,
   XAxis,
@@ -44,6 +43,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { UpStateMap } from '../components/common/UpStateMap';
 import { ExportModal } from '../components/common/ExportModal';
 import {
@@ -644,7 +644,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
           </div>
         }
       >
-        <ResponsiveContainer width="100%" height={260}>
+        <ResponsiveChart width="100%" height={260}>
           <AreaChart data={upActivityTrends30Days} margin={{ top: 15, right: 10, left: 10, bottom: 0 }}>
             <defs>
               <linearGradient id="upColorDynamic" x1="0" y1="0" x2="0" y2="1">
@@ -714,7 +714,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
               fill="url(#upColorDynamic)"
             />
           </AreaChart>
-        </ResponsiveContainer>
+        </ResponsiveChart>
       </ChartCard>
 
       {/* Top Constituencies & Top Districts Benchmark (Rankings Shift Dynamically By Metric!) */}
@@ -753,7 +753,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
               </div>
             }
           >
-            <ResponsiveContainer width="100%" height={260}>
+            <ResponsiveChart width="100%" height={260}>
               <BarChart data={topConstituenciesChartData} margin={{ top: 15, right: 10, left: 10, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
                 <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} angle={-20} textAnchor="end" />
@@ -782,7 +782,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
                   radius={[4, 4, 0, 0]}
                 />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           </ChartCard>
         </div>
 
@@ -826,7 +826,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
               </div>
             }
           >
-            <ResponsiveContainer width="100%" height={260}>
+            <ResponsiveChart width="100%" height={260}>
               <BarChart data={topDistrictsChartData} margin={{ top: 15, right: 10, left: 10, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
                 <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} angle={-20} textAnchor="end" />
@@ -857,7 +857,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
                   radius={[4, 4, 0, 0]}
                 />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           </ChartCard>
         </div>
       </div>
