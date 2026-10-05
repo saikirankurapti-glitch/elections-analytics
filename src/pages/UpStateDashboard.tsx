@@ -188,7 +188,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
             </span>
             <span className="inline-flex items-center gap-1 text-[11px] font-bold bg-amber-50 text-amber-800 px-2 py-0.5 rounded-full border border-amber-300">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs sm:text-sm text-txt-secondary mt-1">
@@ -404,7 +404,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
                 <div className="flex items-center justify-between font-bold text-navy-900 border-b border-amber-200/50 pb-1">
                   <span>Campaign Operations</span>
                   <span className="text-[9px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.2 rounded">
-                    DEMO DATA
+                    SAMPLE ANALYTICS
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-[11px]">
@@ -479,7 +479,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
                 </p>
               </div>
               <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
 
@@ -534,7 +534,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
                 </p>
               </div>
               <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
 
@@ -1200,7 +1200,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
             <span className="text-[10px] uppercase font-bold text-slate-400 block">Campaign Operations</span>
             <div className="font-bold text-white mt-0.5">48 Statewide Cycles</div>
             <div className="text-[10px] text-amber-400 flex items-center gap-1 mt-1 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400" /> Demo Synthetic Telemetry
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400" /> Sample Telemetry
             </div>
           </div>
 
