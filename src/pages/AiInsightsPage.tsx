@@ -18,7 +18,6 @@ import {
   ChevronRight
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   AreaChart,
@@ -34,6 +33,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { mockAiConversationInsights } from '../data/mockData';
 import {
   formatIndianNumber,
@@ -244,7 +244,7 @@ export const AiInsightsPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeTab === 'topics' ? (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <BarChart data={topicChartData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} interval={0} />
@@ -258,9 +258,9 @@ export const AiInsightsPage: React.FC = () => {
                     <Bar dataKey="neutral" name="Neutral Inquiry" stackId="a" fill="#0B1F3A" />
                     <Bar dataKey="negative" name="Grievance / Issue" stackId="a" fill="#E11D48" radius={[3, 3, 0, 0]} />
                   </BarChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={conversationTrendData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="dlgPosGrad" x1="0" y1="0" x2="0" y2="1">
@@ -283,7 +283,7 @@ export const AiInsightsPage: React.FC = () => {
                     <Area type="monotone" dataKey="positive" name="Constructive Inquiries" stroke="#138808" strokeWidth={2} fill="url(#dlgPosGrad)" />
                     <Area type="monotone" dataKey="grievances" name="Escalated Concerns" stroke="#E11D48" strokeWidth={2} fill="url(#dlgGrvGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
@@ -303,7 +303,7 @@ export const AiInsightsPage: React.FC = () => {
             </p>
 
             <div className="h-[200px] mt-2">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveChart width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={overallSentimentData}
@@ -324,7 +324,7 @@ export const AiInsightsPage: React.FC = () => {
                     contentStyle={{ backgroundColor: '#0B1F3A', borderRadius: '6px', color: '#fff', fontSize: '11px' }}
                   />
                 </PieChart>
-              </ResponsiveContainer>
+              </ResponsiveChart>
             </div>
 
             <div className="space-y-1.5 pt-2 border-t border-slate-100 text-xs">
