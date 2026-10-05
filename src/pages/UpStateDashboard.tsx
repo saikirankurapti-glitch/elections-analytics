@@ -215,7 +215,7 @@ export const UpStateDashboard: React.FC<UpStateDashboardProps> = ({
       </div>
 
       {/* Top KPI Command Bar with 3D Depth Numbers & Sparklines */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-3">
         <KpiCard
           title="Constituencies"
           value="403"
