@@ -18,7 +18,6 @@ import {
   ChevronRight
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   AreaChart,
@@ -33,6 +32,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { StatusBadge } from '../components/common/StatusBadge';
 import {
   mockWhatsAppKpis,
@@ -205,7 +205,7 @@ export const WhatsAppDataPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeChartMetric === 'volume' ? (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={whatsappTimelineData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="waSentGrad" x1="0" y1="0" x2="0" y2="1">
@@ -233,9 +233,9 @@ export const WhatsAppDataPage: React.FC = () => {
                     <Area type="monotone" dataKey="delivered" name="Delivered" stroke="#138808" strokeWidth={2} fill="url(#waDeliveredGrad)" />
                     <Area type="monotone" dataKey="replies" name="Inbound Replies" stroke="#FF9933" strokeWidth={2} fill="url(#waReplyGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <LineChart data={whatsappTimelineData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="day" tick={{ fontSize: 11, fill: '#64748B' }} tickLine={false} />
@@ -249,7 +249,7 @@ export const WhatsAppDataPage: React.FC = () => {
                     <Line type="monotone" dataKey="readRate" name="Read (Blue Tick) Rate" stroke="#2563EB" strokeWidth={2} dot={{ r: 3 }} />
                     <Line type="monotone" dataKey="replyRate" name="Reply Rate" stroke="#FF9933" strokeWidth={2} dot={{ r: 3 }} />
                   </LineChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
