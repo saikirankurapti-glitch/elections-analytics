@@ -20,7 +20,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   AreaChart,
   Area,
   XAxis,
@@ -31,6 +30,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { FilterBar } from '../components/common/FilterBar';
 import { StateMap } from '../components/common/StateMap';
 import { StatusBadge } from '../components/common/StatusBadge';
@@ -341,7 +341,7 @@ export const StateDashboard: React.FC = () => {
               </>
             }
           >
-            <ResponsiveContainer width="100%" height={290}>
+            <ResponsiveChart width="100%" height={290}>
               <AreaChart data={mockActivityTrends} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="trendGradient" x1="0" y1="0" x2="0" y2="1">
@@ -388,7 +388,7 @@ export const StateDashboard: React.FC = () => {
                   fill="url(#trendGradient)"
                 />
               </AreaChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           </ChartCard>
         </div>
 
