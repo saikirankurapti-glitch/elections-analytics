@@ -136,7 +136,7 @@ export const ConstituenciesPage: React.FC = () => {
               403 Assembly Constituencies Active
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
