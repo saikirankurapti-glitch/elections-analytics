@@ -15,7 +15,6 @@ import {
   Filter
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   AreaChart,
@@ -30,6 +29,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { StatusBadge } from '../components/common/StatusBadge';
 import { mockSmsKpis, mockSmsCampaigns } from '../data/mockData';
 import {
@@ -195,7 +195,7 @@ export const SmsPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeChartTab === 'volume' && (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={smsTelemetryData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="smsSentGrad" x1="0" y1="0" x2="0" y2="1">
@@ -218,11 +218,11 @@ export const SmsPage: React.FC = () => {
                     <Area type="monotone" dataKey="sent" name="Dispatched SMS" stroke="#0B1F3A" strokeWidth={2} fill="url(#smsSentGrad)" />
                     <Area type="monotone" dataKey="delivered" name="Delivered SMS" stroke="#138808" strokeWidth={2} fill="url(#smsDelivGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
 
               {activeChartTab === 'delivery' && (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <LineChart data={smsTelemetryData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748B' }} tickLine={false} />
@@ -234,11 +234,11 @@ export const SmsPage: React.FC = () => {
                     <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} />
                     <Line type="monotone" dataKey="deliveryRate" name="Telecom Handshake %" stroke="#138808" strokeWidth={2.5} dot={{ r: 3 }} />
                   </LineChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
 
               {activeChartTab === 'responses' && (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <BarChart data={smsTelemetryData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748B' }} tickLine={false} />
@@ -251,7 +251,7 @@ export const SmsPage: React.FC = () => {
                     <Bar dataKey="responses" name="Two-way Inbound Replies" fill="#FF9933" radius={[3, 3, 0, 0]} />
                     <Bar dataKey="clicks" name="Shortlink CTR" fill="#2563EB" radius={[3, 3, 0, 0]} />
                   </BarChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
