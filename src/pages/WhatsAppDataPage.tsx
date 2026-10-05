@@ -97,7 +97,7 @@ export const WhatsAppDataPage: React.FC = () => {
               <CheckCheck className="w-3 h-3" /> Meta Cloud API Active
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -181,7 +181,7 @@ export const WhatsAppDataPage: React.FC = () => {
           <ChartCard
             title="WhatsApp Transmission & Citizen Interaction Trends"
             subtitle="Daily message dispatch volume, delivery performance, and inbound reply velocity"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
             headerAction={
               <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded text-[11px] font-semibold">
                 <button
@@ -261,7 +261,7 @@ export const WhatsAppDataPage: React.FC = () => {
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Broadcast Transmission Funnel</h3>
               <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
             <p className="text-xs text-txt-secondary mt-0.5">
@@ -309,7 +309,7 @@ export const WhatsAppDataPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Benchmark of broadcasts, active community groups, and reply volumes per constituency</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
