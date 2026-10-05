@@ -43,7 +43,7 @@ export const ChartCard: React.FC<ChartCardProps> = ({
         A real minimum height gives direct ResponsiveContainer children a measurable
         parent without fighting nested h-* chart wrappers.
       */}
-      <div className="relative w-full min-w-0 min-h-[260px]">
+      <div className="relative w-full min-w-0 h-[300px] sm:h-[320px] overflow-visible">
         {children}
       </div>
 
