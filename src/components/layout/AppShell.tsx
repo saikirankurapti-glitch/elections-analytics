@@ -22,7 +22,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
         <Sidebar />
 
         {/* Content Area */}
-        <main className="flex-1 min-w-0 min-h-0 overflow-x-hidden flex flex-col px-3 sm:px-5 lg:px-7 xl:px-8 py-4 sm:py-5">
+        <main className="flex-1 min-w-0 min-h-0 overflow-x-auto flex flex-col px-3 sm:px-5 lg:px-7 xl:px-8 py-4 sm:py-5">
           {/* Breadcrumb row */}
           <div className="mb-4">
             <Breadcrumbs />
