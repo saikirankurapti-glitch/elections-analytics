@@ -19,7 +19,6 @@ import {
   Layers
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   XAxis,
@@ -32,6 +31,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { ExportModal } from '../components/common/ExportModal';
 import { useFilters } from '../context/FilterContext';
 import { formatIndianNumber, formatPercent, formatCompactMetric } from '../utils/formatters';
@@ -306,7 +306,7 @@ export const DistrictDashboardPage: React.FC = () => {
               </div>
             }
           >
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveChart width="100%" height={280}>
               <BarChart data={topDistrictsChart} margin={{ top: 15, right: 10, left: 10, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
                 <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} angle={-20} textAnchor="end" />
@@ -337,7 +337,7 @@ export const DistrictDashboardPage: React.FC = () => {
                   radius={[4, 4, 0, 0]}
                 />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveChart>
           </ChartCard>
         </div>
 
