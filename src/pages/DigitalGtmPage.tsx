@@ -90,7 +90,7 @@ export const DigitalGtmPage: React.FC = () => {
               Web Attribution & Citizen Actions
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -180,7 +180,7 @@ export const DigitalGtmPage: React.FC = () => {
           <ChartCard
             title="Portal Traffic & Citizen Conversion Velocity"
             subtitle="Daily visits, verified unique citizens, and action conversions across UP"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
             headerAction={
               <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded text-[11px] font-semibold">
                 <button
@@ -254,7 +254,7 @@ export const DigitalGtmPage: React.FC = () => {
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Traffic Acquisition Channels</h3>
               <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
             <p className="text-xs text-txt-secondary mt-0.5">
@@ -311,7 +311,7 @@ export const DigitalGtmPage: React.FC = () => {
               <p className="text-[11px] text-slate-500">Step-by-step citizen drop-off and conversion efficiency</p>
             </div>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
 
@@ -374,7 +374,7 @@ export const DigitalGtmPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Business-friendly attribution labels for portal interactions and citizen engagements</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
