@@ -87,7 +87,7 @@ export const SocialPage: React.FC = () => {
               Multi-Platform Aggregator
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -171,7 +171,7 @@ export const SocialPage: React.FC = () => {
           <ChartCard
             title="Social Velocity & Video Watch Volume"
             subtitle="Daily impressions, organic reach, and citizen interaction trends in Uttar Pradesh"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
             headerAction={
               <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded text-[11px] font-semibold">
                 <button
@@ -244,7 +244,7 @@ export const SocialPage: React.FC = () => {
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Platform Distribution</h3>
               <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
             <p className="text-xs text-txt-secondary mt-0.5">
@@ -286,7 +286,7 @@ export const SocialPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Video viewership, feed impressions, and citizen reaction benchmarks per constituency</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
@@ -340,7 +340,7 @@ export const SocialPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Highest amplified video briefings and scheme explainers across UP</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
