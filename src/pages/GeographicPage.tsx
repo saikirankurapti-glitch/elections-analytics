@@ -120,7 +120,7 @@ export const GeographicPage: React.FC = () => {
                   Field Operations
                 </span>
                 <span className="text-[9px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
-                  DEMO DATA
+                  SAMPLE ANALYTICS
                 </span>
               </div>
               <div className="flex items-center justify-between text-xs">
