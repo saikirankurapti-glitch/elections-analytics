@@ -62,11 +62,11 @@ export const AdminSettingsPage: React.FC = () => {
       id: 'campaign-telemetry',
       name: 'Campaign Operations Engine (Calling, WhatsApp, SMS)',
       type: 'Live Field Operations Telemetry',
-      status: 'Demo Mode (Synthetic)',
+      status: 'Sample Mode',
       lastSync: '05 Oct 2026 16:24 IST',
       dataset: 'Synthetic Campaign Telemetry Stream',
       frequency: 'Real-time WebSocket / Hourly Poll',
-      records: '4.8M People Reached (Demo)',
+      records: '4.8M People Reached (Sample)',
       url: 'https://api.analytix.internal/v1/telemetry'
     }
   ]);
@@ -289,7 +289,7 @@ export const AdminSettingsPage: React.FC = () => {
           </div>
 
           <p className="text-xs text-slate-600 leading-relaxed">
-            The platform provides clean abstraction providers so mock demonstration data can be swapped for authorized live campaign endpoints without touching the UI.
+            The platform provides clean abstraction providers so sample data can be swapped for authorized live campaign endpoints without touching the UI.
           </p>
 
           <div className="space-y-3 text-xs">
@@ -299,7 +299,7 @@ export const AdminSettingsPage: React.FC = () => {
                 <div className="text-[11px] text-slate-500 font-mono mt-0.5">POST https://api.analytix.in/v1/voice/stream</div>
               </div>
               <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-300">
-                Demo Provider
+                Sample Provider
               </span>
             </div>
 
@@ -309,7 +309,7 @@ export const AdminSettingsPage: React.FC = () => {
                 <div className="text-[11px] text-slate-500 font-mono mt-0.5">POST https://api.analytix.in/v1/meta/webhook</div>
               </div>
               <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-300">
-                Demo Provider
+                Sample Provider
               </span>
             </div>
 
@@ -319,7 +319,7 @@ export const AdminSettingsPage: React.FC = () => {
                 <div className="text-[11px] text-slate-500 font-mono mt-0.5">Sender ID: UP-CAMPAIGN</div>
               </div>
               <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-300">
-                Demo Provider
+                Sample Provider
               </span>
             </div>
           </div>
