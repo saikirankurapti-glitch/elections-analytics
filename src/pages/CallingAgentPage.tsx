@@ -313,7 +313,7 @@ export const CallingAgentPage: React.FC = () => {
       {/* Visual Analytics: Outcomes & Follow-up Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         {/* Call Outcomes Donut */}
-        <div className="lg:col-span-5 bg-white p-5 rounded-lg border border-slate-200 shadow-subtle flex flex-col justify-between">
+        <div className="lg:col-span-5 min-w-0 bg-white p-4 sm:p-5 rounded-lg border border-slate-200 shadow-subtle flex flex-col justify-between overflow-hidden">
           <div>
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Call Outcome & Citizen Sentiment</h3>
@@ -325,18 +325,38 @@ export const CallingAgentPage: React.FC = () => {
               Breakdown of automated and assisted citizen voice interactions across UP
             </p>
 
-            <div className="h-[210px] mt-2">
+            <div className="relative h-[250px] sm:h-[270px] mt-2 min-w-0 rounded-lg bg-gradient-to-br from-slate-50 via-white to-slate-100/70 border border-slate-100 overflow-hidden">
+              <div className="absolute inset-x-6 top-4 h-10 rounded-full bg-slate-200/40 blur-xl pointer-events-none" />
               <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
+                <PieChart margin={{ top: 8, right: 8, bottom: 8, left: 8 }}>
+                  {/* Lower ring creates a subtle 3D/depth layer instead of a flat donut. */}
                   <Pie
                     data={mockCallOutcomes}
                     dataKey="value"
                     nameKey="name"
                     cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={80}
+                    cy="53%"
+                    innerRadius={58}
+                    outerRadius={94}
                     paddingAngle={3}
+                    isAnimationActive={false}
+                  >
+                    {mockCallOutcomes.map((entry, index) => (
+                      <Cell key={`depth-${index}`} fill={entry.color} fillOpacity={0.18} />
+                    ))}
+                  </Pie>
+                  <Pie
+                    data={mockCallOutcomes}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="49%"
+                    innerRadius={54}
+                    outerRadius={90}
+                    paddingAngle={3}
+                    stroke="#FFFFFF"
+                    strokeWidth={2}
+                    style={{ filter: 'drop-shadow(0 8px 8px rgba(15, 23, 42, 0.16))' }}
                   >
                     {mockCallOutcomes.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
@@ -348,9 +368,16 @@ export const CallingAgentPage: React.FC = () => {
                   />
                 </PieChart>
               </ResponsiveContainer>
+              <div className="pointer-events-none absolute left-1/2 top-[49%] -translate-x-1/2 -translate-y-1/2 text-center">
+                <div className="text-2xl sm:text-3xl font-black text-navy-900 tabular-nums">13.1M</div>
+                <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-500">voice outcomes</div>
+              </div>
+              <div className="absolute right-2 top-2 rounded-full border border-slate-200 bg-white/90 px-2 py-1 text-[9px] font-black uppercase tracking-wider text-navy-700 shadow-sm">
+                3D Analytics
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-slate-100">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs pt-3 border-t border-slate-100">
               {mockCallOutcomes.map(item => (
                 <div key={item.name} className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
@@ -363,7 +390,7 @@ export const CallingAgentPage: React.FC = () => {
         </div>
 
         {/* Conversation Quality & Audio Audit Panel */}
-        <div className="lg:col-span-7 command-card p-5 flex flex-col justify-between">
+        <div className="lg:col-span-7 min-w-0 command-card p-4 sm:p-5 flex flex-col justify-between overflow-hidden">
           <div>
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Voice Dialogue Quality Audit</h3>
@@ -375,7 +402,7 @@ export const CallingAgentPage: React.FC = () => {
               Bilingual Hindi/English natural language processing with regional dialect adaptation (Bhojpuri, Awadhi, Braj, Bundeli)
             </p>
 
-            <div className="grid grid-cols-3 gap-3 my-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
               <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-[10px] uppercase font-bold text-slate-500 block">Dialect Fidelity</span>
                 <span className="text-base font-black text-navy-900 font-mono">98.2%</span>
@@ -450,7 +477,7 @@ export const CallingAgentPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto overscroll-x-contain">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
               <tr className="bg-slate-50 text-[11px] font-bold text-navy-900 border-b border-slate-200 uppercase tracking-wider">
