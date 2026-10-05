@@ -81,9 +81,9 @@ export const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-40 bg-navy-900 border-b border-navy-800 text-white shadow-header">
-      <div className="px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <div className="min-w-0 px-3 sm:px-5 lg:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4 overflow-hidden">
         {/* Left Section: Logo & Product Title */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="p-1.5 rounded-md hover:bg-navy-800 text-slate-300 hover:text-white transition-colors lg:hidden"
@@ -104,9 +104,9 @@ export const Header: React.FC = () => {
               </div>
             </div>
 
-            <div>
+            <div className="min-w-0">
               <div className="flex items-center gap-2">
-                <h1 className="text-lg font-black tracking-wider text-white uppercase font-sans">
+                <h1 className="text-base sm:text-lg font-black tracking-wider text-white uppercase font-sans">
                   ANALYTIX
                 </h1>
                 <span className="hidden sm:inline-flex text-[10px] uppercase font-bold tracking-widest bg-saffron-500/20 text-saffron-300 px-1.5 py-0.5 rounded border border-saffron-500/30">
@@ -218,7 +218,7 @@ export const Header: React.FC = () => {
           {/* Sample Mode Badge */}
           <div className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-            Demo Mode
+            Sample Mode
           </div>
 
           {/* Notifications Dropdown */}
