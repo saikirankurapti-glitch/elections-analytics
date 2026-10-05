@@ -98,7 +98,7 @@ export const SmsPage: React.FC = () => {
       </div>
 
       {/* 8 SMS KPIs (Phase 14 Specs) */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-2.5">
         <KpiCard
           title="Messages Sent"
           value={formatCompactMetric(mockSmsKpis.messagesSent)}
