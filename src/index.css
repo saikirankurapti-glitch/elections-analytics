@@ -105,3 +105,7 @@
     color: #000000 !important;
   }
 }
+
+
+/* KPI safety: keep 3D/depth numbers and sparklines clipped inside cards */
+.kpi-card-safe { min-width: 0; overflow: hidden; }
