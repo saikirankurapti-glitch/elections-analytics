@@ -16,7 +16,6 @@ import {
   Filter
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   AreaChart,
@@ -34,6 +33,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import {
   mockSocialKpis,
   mockSocialPlatformBreakdown,
@@ -195,7 +195,7 @@ export const SocialPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeChartTab === 'reach' ? (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={socialTimelineData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="socReachGrad" x1="0" y1="0" x2="0" y2="1">
@@ -218,9 +218,9 @@ export const SocialPage: React.FC = () => {
                     <Area type="monotone" dataKey="reach" name="Citizen Reach" stroke="#0B1F3A" strokeWidth={2.5} fill="url(#socReachGrad)" />
                     <Area type="monotone" dataKey="views" name="Video Views" stroke="#FF9933" strokeWidth={2} fill="url(#socViewsGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <LineChart data={socialTimelineData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748B' }} tickLine={false} />
@@ -232,7 +232,7 @@ export const SocialPage: React.FC = () => {
                     <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} />
                     <Line type="monotone" dataKey="engRate" name="Daily Engagement Rate" stroke="#138808" strokeWidth={2.5} dot={{ r: 4 }} />
                   </LineChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
@@ -252,7 +252,7 @@ export const SocialPage: React.FC = () => {
             </p>
 
             <div className="h-[210px] mt-2">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveChart width="100%" height="100%">
                 <BarChart data={mockSocialPlatformBreakdown} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                   <XAxis dataKey="platform" tick={{ fontSize: 11, fill: '#64748B' }} />
@@ -263,7 +263,7 @@ export const SocialPage: React.FC = () => {
                   />
                   <Bar dataKey="reach" name="Platform Reach" fill="#0B1F3A" radius={[3, 3, 0, 0]} />
                 </BarChart>
-              </ResponsiveContainer>
+              </ResponsiveChart>
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-slate-100">
