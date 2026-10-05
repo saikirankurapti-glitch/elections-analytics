@@ -156,7 +156,7 @@ export const ConstituenciesPage: React.FC = () => {
       </div>
 
       {/* 10 KPIs with 3D Depth Numbers & Sparklines */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-8 2xl:grid-cols-10 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2.5">
         <KpiCard
           title="Campaigns"
           value={kpis.activeCampaigns}
