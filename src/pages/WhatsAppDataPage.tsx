@@ -115,7 +115,7 @@ export const WhatsAppDataPage: React.FC = () => {
       </div>
 
       {/* 8 WhatsApp KPIs (Phase 13 Specs) */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2.5">
         <KpiCard
           title="Messages Sent"
           value={formatCompactMetric(mockWhatsAppKpis.messagesSent)}
