@@ -16,7 +16,6 @@ import {
   FileText
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   BarChart,
   Bar,
   AreaChart,
@@ -32,6 +31,7 @@ import {
 } from 'recharts';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import {
   mockDigitalKpis,
   mockDigitalGtmEvents,
@@ -204,7 +204,7 @@ export const DigitalGtmPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeChartTab === 'traffic' ? (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={trafficTrendData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="visGrad" x1="0" y1="0" x2="0" y2="1">
@@ -227,9 +227,9 @@ export const DigitalGtmPage: React.FC = () => {
                     <Area type="monotone" dataKey="visits" name="Total Sessions" stroke="#0B1F3A" strokeWidth={2.5} fill="url(#visGrad)" />
                     <Area type="monotone" dataKey="ctaClicks" name="CTA Clicks" stroke="#FF9933" strokeWidth={2} fill="url(#ctaGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <BarChart data={trafficTrendData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748B' }} tickLine={false} />
@@ -242,7 +242,7 @@ export const DigitalGtmPage: React.FC = () => {
                     <Bar dataKey="conversions" name="Verified Conversions" fill="#138808" radius={[3, 3, 0, 0]} />
                     <Bar dataKey="ctaClicks" name="Action Trigger Clicks" fill="#FF9933" radius={[3, 3, 0, 0]} />
                   </BarChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
@@ -262,7 +262,7 @@ export const DigitalGtmPage: React.FC = () => {
             </p>
 
             <div className="h-[200px] mt-2">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveChart width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={mockTrafficSources}
@@ -286,7 +286,7 @@ export const DigitalGtmPage: React.FC = () => {
                     contentStyle={{ backgroundColor: '#0B1F3A', borderRadius: '6px', color: '#fff', fontSize: '11px' }}
                   />
                 </PieChart>
-              </ResponsiveContainer>
+              </ResponsiveChart>
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-slate-100">
