@@ -80,7 +80,7 @@ export const SmsPage: React.FC = () => {
               <ShieldCheck className="w-3 h-3" /> TRAI DLT Verified
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -163,7 +163,7 @@ export const SmsPage: React.FC = () => {
           <ChartCard
             title="SMS Dispatch Volume & Telecom Gateway Performance"
             subtitle="Daily delivery status across Airtel, Jio, and BSNL UP telecom circles"
-            badge="DEMO DATA"
+            badge="SAMPLE ANALYTICS"
             headerAction={
               <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded text-[11px] font-semibold">
                 <button
@@ -300,7 +300,7 @@ export const SmsPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">Benchmark of dispatches, delivery efficiency, and citizen clicks per constituency</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
@@ -354,7 +354,7 @@ export const SmsPage: React.FC = () => {
             <p className="text-[11px] text-slate-500">TRAI whitelisted transactional and informational broadcasts</p>
           </div>
           <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-            DEMO DATA
+            SAMPLE ANALYTICS
           </span>
         </div>
 
