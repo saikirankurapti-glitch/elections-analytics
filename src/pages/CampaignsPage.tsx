@@ -20,7 +20,6 @@ import {
   ChevronRight
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   AreaChart,
   Area,
   BarChart,
@@ -38,6 +37,7 @@ import { mockCampaigns } from '../data/mockData';
 import { useFilters } from '../context/FilterContext';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { StatusBadge } from '../components/common/StatusBadge';
 import {
   formatIndianNumber,
@@ -259,7 +259,7 @@ export const CampaignsPage: React.FC = () => {
           >
             <div className="h-72 w-full pt-2">
               {activeChartTab === 'activity' ? (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <AreaChart data={activityTimelineData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <defs>
                       <linearGradient id="cmpReachGrad" x1="0" y1="0" x2="0" y2="1">
@@ -296,9 +296,9 @@ export const CampaignsPage: React.FC = () => {
                     <Area type="monotone" dataKey="reach" name="Total Reach" stroke="#0B1F3A" strokeWidth={2.5} fillOpacity={1} fill="url(#cmpReachGrad)" />
                     <Area type="monotone" dataKey="calls" name="Voice Calls" stroke="#FF9933" strokeWidth={2} fillOpacity={1} fill="url(#cmpCallGrad)" />
                   </AreaChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveChart width="100%" height="100%">
                   <BarChart data={campaignChannelData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                     <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} tickLine={false} />
@@ -327,7 +327,7 @@ export const CampaignsPage: React.FC = () => {
                     <Bar dataKey="whatsapp" name="WhatsApp" fill="#138808" radius={[3, 3, 0, 0]} />
                     <Bar dataKey="sms" name="SMS" fill="#2563EB" radius={[3, 3, 0, 0]} />
                   </BarChart>
-                </ResponsiveContainer>
+                </ResponsiveChart>
               )}
             </div>
           </ChartCard>
@@ -341,7 +341,7 @@ export const CampaignsPage: React.FC = () => {
             badge="SAMPLE ANALYTICS"
           >
             <div className="h-44 w-full">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveChart width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={typeDistributionData}
@@ -361,7 +361,7 @@ export const CampaignsPage: React.FC = () => {
                     contentStyle={{ backgroundColor: '#0B1F3A', borderRadius: '6px', color: '#fff', fontSize: '11px' }}
                   />
                 </PieChart>
-              </ResponsiveContainer>
+              </ResponsiveChart>
             </div>
             <div className="grid grid-cols-2 gap-1.5 pt-2 border-t border-slate-100 text-[10px]">
               {typeDistributionData.map((item, idx) => (
