@@ -17,7 +17,6 @@ import {
   Globe
 } from 'lucide-react';
 import {
-  ResponsiveContainer,
   AreaChart,
   Area,
   BarChart,
@@ -31,6 +30,7 @@ import {
 import { useFilters } from '../context/FilterContext';
 import { KpiCard } from '../components/common/KpiCard';
 import { ChartCard } from '../components/common/ChartCard';
+import { ResponsiveChart } from '../components/common/ResponsiveChart';
 import { UpConstituencyTable } from '../components/common/UpConstituencyTable';
 import { ExportModal } from '../components/common/ExportModal';
 import { constituencyDataProvider, campaignDataProvider } from '../services/providers';
@@ -274,7 +274,7 @@ export const ConstituenciesPage: React.FC = () => {
           </div>
         }
       >
-        <ResponsiveContainer width="100%" height={260}>
+        <ResponsiveChart width="100%" height={260}>
           <BarChart data={topConstituenciesChartData} margin={{ top: 15, right: 10, left: 10, bottom: 25 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
             <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748B' }} angle={-20} textAnchor="end" />
@@ -297,7 +297,7 @@ export const ConstituenciesPage: React.FC = () => {
               radius={[4, 4, 0, 0]}
             />
           </BarChart>
-        </ResponsiveContainer>
+        </ResponsiveChart>
       </ChartCard>
 
       {/* 403-Constituency Data Table Component */}
