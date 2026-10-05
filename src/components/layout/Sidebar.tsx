@@ -73,11 +73,11 @@ export const Sidebar: React.FC = () => {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed lg:sticky top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 bg-navy-950 border-r border-navy-800 flex flex-col justify-between transition-transform duration-300 ease-in-out shrink-0 ${
+        className={`fixed lg:sticky top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 max-w-[85vw] bg-navy-950 border-r border-navy-800 flex flex-col justify-between transition-transform duration-300 ease-in-out shrink-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
-        <div className="flex-1 overflow-y-auto py-4 px-3 space-y-5">
+        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain py-4 px-3 space-y-5">
           {/* Section: Operational Command */}
           <div>
             <div className="px-3 mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">
