@@ -104,7 +104,7 @@ export const CallingAgentPage: React.FC = () => {
               Active Voice Engine
             </span>
             <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-              DEMO DATA
+              SAMPLE ANALYTICS
             </span>
           </div>
           <p className="text-xs text-txt-secondary mt-0.5">
@@ -318,7 +318,7 @@ export const CallingAgentPage: React.FC = () => {
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-navy-900">Call Outcome & Citizen Sentiment</h3>
               <span className="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-300">
-                DEMO DATA
+                SAMPLE ANALYTICS
               </span>
             </div>
             <p className="text-xs text-txt-secondary mt-0.5">
